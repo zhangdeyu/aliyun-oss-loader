@@ -2,10 +2,11 @@
     MIT License http://www.opensource.org/licenses/mit-license.php
     Author Derek
 */
+
+var fs = require('fs');
 var co = require('co');
 var OSS = require('ali-oss');
-var loaderUtils = require("loader-utils");
-var fs = require('fs');
+var loaderUtils = require('loader-utils');
 
 module.exports = function(content) {
     this.cacheable && this.cacheable();
@@ -18,11 +19,7 @@ module.exports = function(content) {
         accessKeySecret: options.accessKeySecret
     });
 
-    var filename = loaderUtils.interpolateName(this, '[name].[hash].[ext]', {content: content})
-
-    if (options.path) {
-        filename = options.path + filename
-    }
+    var filename = loaderUtils.interpolateName(this, options.name ? options.name : '[name].[hash].[ext]', {content: content});
 
     co(function* () {
         var result = yield client.put(filename, new Buffer(content));
@@ -30,7 +27,7 @@ module.exports = function(content) {
         console.log(err);
     });
 
-    return "module.exports = " + JSON.stringify((options.https ? "https://" : "http://") + options.bucket + '.' + options.region + '.aliyuncs.com/' + filename);
+    return 'module.exports = ' + JSON.stringify((options.https ? 'https://' : 'http://') + options.bucket + '.' + options.region + '.aliyuncs.com/' + filename);
 };
 
 module.exports.raw = true;

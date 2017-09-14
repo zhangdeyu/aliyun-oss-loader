@@ -18,7 +18,7 @@ a webpack loader for uploading files to aliyun oss
                     bucket: 'xxxxxx',
                     accessKeyId: 'xxxxx',
                     accessKeySecret: 'xxxx',
-                    path: 'folder/',
+                    name: 'folder/[name].[hash].[ext]',
                     https: true
                 }
             }
@@ -37,8 +37,8 @@ a webpack loader for uploading files to aliyun oss
 > `String` Required
 - `accessKeySecret`
 > `String` Required
-- `path` `String`
-> default ''
+- `name` `String`
+> default '[name].[hash].[ext]'
 - `https` `Boolean`
 > default false
 
