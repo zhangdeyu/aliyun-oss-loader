@@ -4,15 +4,24 @@
   "description": "aliyun oss loader for webpack",
   "main": "index.js",
   "scripts": {},
-  "author": "",
-  "license": "ISC",
+  "author": "Derek",
+  "license": "MIT",
   "dependencies": {
     "ali-oss": "^4.10.1",
     "co": "^4.6.0",
     "loader-utils": "^1.1.0"
   },
-  "directories": {
-    "test": "test"
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangdeyu/aliyun-oss-loader.git"
   },
-  "devDependencies": {}
+  "keywords": [
+    "webpack loader",
+    "aliyun oss"
+  ],
+  "bugs": {
+    "url": "https://github.com/zhangdeyu/aliyun-oss-loader/issues"
+  },
+  "homepage": "https://github.com/zhangdeyu/aliyun-oss-loader#readme"
 }
