@@ -20,13 +20,17 @@ module.exports = function(content) {
 
     var filename = loaderUtils.interpolateName(this, '[name].[hash].[ext]', {content: content})
 
+    if (options.path) {
+        filename = options.path + filename
+    }
+
     co(function* () {
         var result = yield client.put(filename, new Buffer(content));
     }).catch(function (err) {
         console.log(err);
     });
 
-    return "module.exports = " + JSON.stringify("http://" + options.bucket + '.' + options.region + '.aliyuncs.com/' + filename);
+    return "module.exports = " + JSON.stringify((options.https ? "https://" : "http://") + options.bucket + '.' + options.region + '.aliyuncs.com/' + filename);
 };
 
 module.exports.raw = true;

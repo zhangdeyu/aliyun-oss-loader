@@ -15,13 +15,30 @@
                     region: 'xxxxxxxxx',
                     bucket: 'xxxxxx',
                     accessKeyId: 'xxxxx',
-                    accessKeySecret: 'xxxx'
+                    accessKeySecret: 'xxxx',
+                    path: 'folder/',
+                    https: true
                 }
             }
         ]
     }
 
 ```
+
+## params
+
+- `region`
+> `String` Required
+- `bucket` 
+> `String` Required
+- `accessKeyId`
+> `String` Required
+- `accessKeySecret`
+> `String` Required
+- `path` `String`
+> default ''
+- `https` `Boolean`
+> default false
 
 
 ## License
