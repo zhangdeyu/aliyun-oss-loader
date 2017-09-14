@@ -8,7 +8,7 @@ set config in your webpack file
         loaders: [
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                loader: '../index.js',
+                loader: 'aliyun-oss-loader',
                 options: {
                     region: 'xxxxxxxxx',
                     bucket: 'xxxxxx',
