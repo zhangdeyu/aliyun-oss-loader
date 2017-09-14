@@ -1,5 +1,7 @@
 # aliyun-oss-loader
 
+a webpack loader for uploading files to aliyun oss
+
 ## usage
 - npm install aliyun-oss-loader --save-dev
 
