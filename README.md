@@ -1,8 +1,10 @@
 # aliyun-oss-loader
 
 ## usage
+- npm install aliyun-oss-loader --save-dev
 
-set config in your webpack file
+- set config in your webpack file
+
 ``` javascript
     module: {
         loaders: [
