@@ -1,6 +1,7 @@
 # aliyun-oss-loader
 
 a webpack loader for uploading files to aliyun oss
+![dw](https://img.shields.io/npm/dw/aliyun-oss-loader.svg) ![dm](https://img.shields.io/npm/dm/aliyun-oss-loader.svg) ![dy](https://img.shields.io/npm/dy/aliyun-oss-loader.svg) ![l](https://img.shields.io/npm/l/aliyun-oss-loader.svg)
 
 ## usage
 - npm install aliyun-oss-loader --save-dev
@@ -30,19 +31,19 @@ a webpack loader for uploading files to aliyun oss
 ## params
 
 - `region`
-> `String` Required
-- `bucket` 
-> `String` Required
+    - `String` Required
+
+- `bucket`
+    -  `String` Required
+
 - `accessKeyId`
-> `String` Required
+    - `String` Required
+
 - `accessKeySecret`
-> `String` Required
-- `name` `String`
-> default '[name].[hash].[ext]'
-- `https` `Boolean`
-> default false
+    - `String` Required
 
+- `name`
+    - `String` default '[name].[hash].[ext]'
 
-## License
-
-MIT (http://www.opensource.org/licenses/mit-license.php)
+- `https`
+    - `Boolean` default false

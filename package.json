@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {},
   "author": "Derek",
-  "license": "MIT",
+  "license": "WTFPL",
   "dependencies": {
     "ali-oss": "^4.10.1",
     "co": "^4.6.0",
