@@ -1,6 +1,6 @@
 {
   "name": "aliyun-oss-loader",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "aliyun oss loader for webpack",
   "main": "index.js",
   "scripts": {},
