@@ -22,7 +22,7 @@ a webpack loader for uploading files to aliyun oss
                     accessKeySecret: 'xxxx',
                     name: 'folder/[name].[hash].[ext]',
                     https: true,
-                    domain: 'img.xxx.com'
+                    domain: 'img.xxx.com/'
                 }
             }
         ]
