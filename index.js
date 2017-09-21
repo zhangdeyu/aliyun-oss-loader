@@ -26,6 +26,14 @@ module.exports = function(content) {
         console.log(err);
     });
 
+    if (options.domain) {
+        var path = options.domain + filename;
+        if (options.domain.indexOf('http') === -1) {
+            path = (options.https ? 'https://' : 'http://') + path;
+        }
+        return 'module.exports = ' + JSON.stringify(path);
+    }
+
     return 'module.exports = ' + JSON.stringify((options.https ? 'https://' : 'http://') + options.bucket + '.' + options.region + '.aliyuncs.com/' + filename);
 };
 

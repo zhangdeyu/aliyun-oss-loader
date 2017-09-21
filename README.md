@@ -21,7 +21,8 @@ a webpack loader for uploading files to aliyun oss
                     accessKeyId: 'xxxxx',
                     accessKeySecret: 'xxxx',
                     name: 'folder/[name].[hash].[ext]',
-                    https: true
+                    https: true,
+                    domain: 'img.xxx.com'
                 }
             }
         ]
@@ -44,7 +45,9 @@ a webpack loader for uploading files to aliyun oss
     - `String` Required
 
 - `name`
-    - `String` default '[name].[hash].[ext]'
+    - `String` Optional default '[name].[hash].[ext]'
 
 - `https`
-    - `Boolean` default false
+    - `Boolean` Optional default false
+- `domain`
+    - `String` Optional support customize domain name
